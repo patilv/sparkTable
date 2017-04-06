@@ -1305,7 +1305,7 @@ setMethod(f='export', signature='sparkTable',
         cat('\\raisebox{-#1mm}{\\includegraphics[height=#2em]{#3}}\n')
         cat('}\n')
         cat('\\begin{document}\n')
-        print(xT <- xtable(m), sanitize.text.function = function(x){x})
+        print(xT <- xtable(m, align='lcccccccccccccc'), sanitize.text.function = function(x){x})
         cat('\\end{document}')
       }
       sink()
